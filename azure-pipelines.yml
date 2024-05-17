@@ -24,6 +24,6 @@ stages:
       steps:
       - task: PublishPipelineArtifact@1
         inputs:
-          targetPath: '/home/ec2-user/myagent/_work/2/s/target'
+          targetPath: '${Build.ArtifactStagingDirectory}'
           artifact: 'app.jar'
           publishLocation: 'pipeline'
