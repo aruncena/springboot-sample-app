@@ -167,6 +167,16 @@
       <id>spring-milestone</id>
       <url>https://repo.spring.io/libs-release</url>
     </repository>
+    <repository>
+      <id>arunkumart93</id>
+      <url>https://pkgs.dev.azure.com/arunkumart93/_packaging/arunkumart93/maven/v1</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
   </repositories>
 
   <pluginRepositories>
@@ -177,13 +187,3 @@
   </pluginRepositories>
 
 </project>
-<repository>
-  <id>arunkumart93</id>
-  <url>https://pkgs.dev.azure.com/arunkumart93/_packaging/arunkumart93/maven/v1</url>
-  <releases>
-    <enabled>true</enabled>
-  </releases>
-  <snapshots>
-    <enabled>true</enabled>
-  </snapshots>
-</repository>
