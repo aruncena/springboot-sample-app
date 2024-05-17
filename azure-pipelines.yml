@@ -11,10 +11,19 @@ stages:
       - task: Maven@4
         inputs:
           mavenPomFile: 'pom.xml'
-          goals: 'clean package deploy -Dmaven.test.skip=true'
+          goals: 'clean package -Dmaven.test.skip=true'
           publishJUnitResults: false
           javaHomeOption: 'JDKVersion'
           mavenVersionOption: 'Default'
           mavenAuthenticateFeed: false
           effectivePomSkip: false
           sonarQubeRunAnalysis: false
+  - stage: PublishArtifact
+    jobs:
+    - job:
+      steps:
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+          ArtifactName: 'springboot-sample-app-0.0.1-SNAPSHOT.jar'
+          publishLocation: 'Container'
