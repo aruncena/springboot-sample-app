@@ -22,8 +22,8 @@ stages:
     jobs:
     - job:
       steps:
-      - task: PublishBuildArtifacts@1
+      - task: PublishPipelineArtifact@1
         inputs:
-          PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-          ArtifactName: 'app.jar'
-          publishLocation: 'Container'
+          targetPath: '$(Pipeline.Workspace)'
+          artifact: 'app.jar'
+          publishLocation: 'pipeline'
