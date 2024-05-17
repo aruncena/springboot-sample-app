@@ -25,5 +25,5 @@ stages:
       - task: PublishPipelineArtifact@1
         inputs:
           targetPath: '$(Build.SourcesDirectory)/target/'
-          artifact: 'app'
+          artifact: 'app.jar'
           publishLocation: 'pipeline'
